@@ -15,6 +15,14 @@
 		A444D1362C75A36F00BC610F /* VerbalixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1352C75A36F00BC610F /* VerbalixTests.swift */; };
 		A444D1402C75A36F00BC610F /* VerbalixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D13F2C75A36F00BC610F /* VerbalixUITests.swift */; };
 		A444D1422C75A36F00BC610F /* VerbalixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1412C75A36F00BC610F /* VerbalixUITestsLaunchTests.swift */; };
+		A444D1552C75A55700BC610F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1542C75A55700BC610F /* ShareViewController.swift */; };
+		A444D1582C75A55700BC610F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A444D1572C75A55700BC610F /* Base */; };
+		A444D15C2C75A55700BC610F /* VerbalixShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A444D1522C75A55700BC610F /* VerbalixShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A444D1682C75A73800BC610F /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A444D1672C75A73800BC610F /* UniformTypeIdentifiers.framework */; };
+		A444D16B2C75A73800BC610F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A444D16A2C75A73800BC610F /* Media.xcassets */; };
+		A444D16D2C75A73800BC610F /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D16C2C75A73800BC610F /* ActionRequestHandler.swift */; };
+		A444D16F2C75A73800BC610F /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = A444D16E2C75A73800BC610F /* Action.js */; };
+		A444D1732C75A73800BC610F /* VerbalixActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +40,36 @@
 			remoteGlobalIDString = A444D11E2C75A36E00BC610F;
 			remoteInfo = Verbalix;
 		};
+		A444D15A2C75A55700BC610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A444D1172C75A36E00BC610F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A444D1512C75A55700BC610F;
+			remoteInfo = VerbalixShareExtension;
+		};
+		A444D1712C75A73800BC610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A444D1172C75A36E00BC610F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A444D1642C75A73800BC610F;
+			remoteInfo = VerbalixActionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A444D1602C75A55700BC610F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A444D15C2C75A55700BC610F /* VerbalixShareExtension.appex in Embed Foundation Extensions */,
+				A444D1732C75A73800BC610F /* VerbalixActionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A444D11F2C75A36E00BC610F /* Verbalix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verbalix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +83,16 @@
 		A444D13B2C75A36F00BC610F /* VerbalixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerbalixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444D13F2C75A36F00BC610F /* VerbalixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixUITests.swift; sourceTree = "<group>"; };
 		A444D1412C75A36F00BC610F /* VerbalixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A444D1522C75A55700BC610F /* VerbalixShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VerbalixShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A444D1542C75A55700BC610F /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		A444D1572C75A55700BC610F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A444D1592C75A55700BC610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VerbalixActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A444D1672C75A73800BC610F /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		A444D16A2C75A73800BC610F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		A444D16C2C75A73800BC610F /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		A444D16E2C75A73800BC610F /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		A444D1702C75A73800BC610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +117,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A444D14F2C75A55700BC610F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444D1622C75A73800BC610F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444D1682C75A73800BC610F /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +141,9 @@
 				A444D1212C75A36E00BC610F /* Verbalix */,
 				A444D1342C75A36F00BC610F /* VerbalixTests */,
 				A444D13E2C75A36F00BC610F /* VerbalixUITests */,
+				A444D1532C75A55700BC610F /* VerbalixShareExtension */,
+				A444D1692C75A73800BC610F /* VerbalixActionExtension */,
+				A444D1662C75A73800BC610F /* Frameworks */,
 				A444D1202C75A36E00BC610F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +154,8 @@
 				A444D11F2C75A36E00BC610F /* Verbalix.app */,
 				A444D1312C75A36F00BC610F /* VerbalixTests.xctest */,
 				A444D13B2C75A36F00BC610F /* VerbalixUITests.xctest */,
+				A444D1522C75A55700BC610F /* VerbalixShareExtension.appex */,
+				A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +197,35 @@
 			path = VerbalixUITests;
 			sourceTree = "<group>";
 		};
+		A444D1532C75A55700BC610F /* VerbalixShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A444D1542C75A55700BC610F /* ShareViewController.swift */,
+				A444D1562C75A55700BC610F /* MainInterface.storyboard */,
+				A444D1592C75A55700BC610F /* Info.plist */,
+			);
+			path = VerbalixShareExtension;
+			sourceTree = "<group>";
+		};
+		A444D1662C75A73800BC610F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A444D1672C75A73800BC610F /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A444D1692C75A73800BC610F /* VerbalixActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A444D16A2C75A73800BC610F /* Media.xcassets */,
+				A444D16C2C75A73800BC610F /* ActionRequestHandler.swift */,
+				A444D16E2C75A73800BC610F /* Action.js */,
+				A444D1702C75A73800BC610F /* Info.plist */,
+			);
+			path = VerbalixActionExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,10 +236,13 @@
 				A444D11B2C75A36E00BC610F /* Sources */,
 				A444D11C2C75A36E00BC610F /* Frameworks */,
 				A444D11D2C75A36E00BC610F /* Resources */,
+				A444D1602C75A55700BC610F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A444D15B2C75A55700BC610F /* PBXTargetDependency */,
+				A444D1722C75A73800BC610F /* PBXTargetDependency */,
 			);
 			name = Verbalix;
 			productName = Verbalix;
@@ -186,6 +285,40 @@
 			productReference = A444D13B2C75A36F00BC610F /* VerbalixUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A444D1512C75A55700BC610F /* VerbalixShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A444D15D2C75A55700BC610F /* Build configuration list for PBXNativeTarget "VerbalixShareExtension" */;
+			buildPhases = (
+				A444D14E2C75A55700BC610F /* Sources */,
+				A444D14F2C75A55700BC610F /* Frameworks */,
+				A444D1502C75A55700BC610F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VerbalixShareExtension;
+			productName = VerbalixShareExtension;
+			productReference = A444D1522C75A55700BC610F /* VerbalixShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A444D1642C75A73800BC610F /* VerbalixActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A444D1742C75A73800BC610F /* Build configuration list for PBXNativeTarget "VerbalixActionExtension" */;
+			buildPhases = (
+				A444D1612C75A73800BC610F /* Sources */,
+				A444D1622C75A73800BC610F /* Frameworks */,
+				A444D1632C75A73800BC610F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VerbalixActionExtension;
+			productName = VerbalixActionExtension;
+			productReference = A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +340,12 @@
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = A444D11E2C75A36E00BC610F;
 					};
+					A444D1512C75A55700BC610F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A444D1642C75A73800BC610F = {
+						CreatedOnToolsVersion = 15.3;
+					};
 				};
 			};
 			buildConfigurationList = A444D11A2C75A36E00BC610F /* Build configuration list for PBXProject "Verbalix" */;
@@ -225,6 +364,8 @@
 				A444D11E2C75A36E00BC610F /* Verbalix */,
 				A444D1302C75A36F00BC610F /* VerbalixTests */,
 				A444D13A2C75A36F00BC610F /* VerbalixUITests */,
+				A444D1512C75A55700BC610F /* VerbalixShareExtension */,
+				A444D1642C75A73800BC610F /* VerbalixActionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +391,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444D1502C75A55700BC610F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444D1582C75A55700BC610F /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444D1632C75A73800BC610F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444D16F2C75A73800BC610F /* Action.js in Resources */,
+				A444D16B2C75A73800BC610F /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +441,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A444D14E2C75A55700BC610F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444D1552C75A55700BC610F /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444D1612C75A73800BC610F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444D16D2C75A73800BC610F /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,7 +470,28 @@
 			target = A444D11E2C75A36E00BC610F /* Verbalix */;
 			targetProxy = A444D13C2C75A36F00BC610F /* PBXContainerItemProxy */;
 		};
+		A444D15B2C75A55700BC610F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A444D1512C75A55700BC610F /* VerbalixShareExtension */;
+			targetProxy = A444D15A2C75A55700BC610F /* PBXContainerItemProxy */;
+		};
+		A444D1722C75A73800BC610F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A444D1642C75A73800BC610F /* VerbalixActionExtension */;
+			targetProxy = A444D1712C75A73800BC610F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A444D1562C75A55700BC610F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A444D1572C75A55700BC610F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A444D1432C75A36F00BC610F /* Debug */ = {
@@ -421,6 +616,7 @@
 		A444D1462C75A36F00BC610F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +646,7 @@
 		A444D1472C75A36F00BC610F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +749,106 @@
 			};
 			name = Release;
 		};
+		A444D15E2C75A55700BC610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A444D15F2C75A55700BC610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A444D1752C75A73800BC610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A444D1762C75A73800BC610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,6 +884,24 @@
 			buildConfigurations = (
 				A444D14C2C75A36F00BC610F /* Debug */,
 				A444D14D2C75A36F00BC610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A444D15D2C75A55700BC610F /* Build configuration list for PBXNativeTarget "VerbalixShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A444D15E2C75A55700BC610F /* Debug */,
+				A444D15F2C75A55700BC610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A444D1742C75A73800BC610F /* Build configuration list for PBXNativeTarget "VerbalixActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A444D1752C75A73800BC610F /* Debug */,
+				A444D1762C75A73800BC610F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
