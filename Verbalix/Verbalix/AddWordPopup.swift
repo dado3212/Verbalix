@@ -11,7 +11,8 @@ import SwiftUI
 struct AddWordPopup: View {
   @Binding var showPopup: Bool
   @State private var word = ""
-  @State private var definition: String = ""
+  @State private var definitions: [String] = []
+  @State private var selectedDefinition: String = ""
   
   var addWord: (String, String) -> Void
   
@@ -19,11 +20,17 @@ struct AddWordPopup: View {
     NavigationView {
       Form {
         Section(header: Text("New Word")) {
-          TextField("Word", text: $word).textInputAutocapitalization(.never)
+          TextField("Word", text: $word).textInputAutocapitalization(.never).autocorrectionDisabled()
         }
         
-        Section {
-          Text("\(definition)")
+        if !definitions.isEmpty {
+            Section(header: Text("Select Definition")) {
+                Picker("Definitions", selection: $selectedDefinition) {
+                    ForEach(definitions, id: \.self) { definition in
+                        Text(definition).tag(definition)
+                    }
+                }
+            }
         }
         
         Button("Fetch Definition") {
@@ -32,10 +39,10 @@ struct AddWordPopup: View {
         }.disabled(word.isEmpty)
         
         Button("Add") {
-          addWord(word, definition)
+          addWord(word, selectedDefinition)
           showPopup = false
         }
-        .disabled(word.isEmpty || definition.isEmpty)
+        .disabled(word.isEmpty || selectedDefinition.isEmpty)
       }
       .navigationTitle("Add Word")
       .navigationBarItems(leading: Button("Cancel") {
@@ -67,15 +74,23 @@ struct AddWordPopup: View {
         let result = try JSONDecoder().decode([DictionaryEntry].self, from: data)
         // Extract the first definition of the first meaning, if available
         print(result)
-        if let firstEntry = result.first, let firstMeaning = firstEntry.meanings.first, let firstDefinition = firstMeaning.definitions.first {
-          DispatchQueue.main.async {
-            definition = firstDefinition.definition
-          }
-        } else {
-          print("No definition found")
+        
+        var fetchedDefinitions: [String] = []
+        if let firstEntry = result.first {
+            for meaning in firstEntry.meanings {
+                for definition in meaning.definitions {
+                    fetchedDefinitions.append(definition.definition)
+                }
+            }
+        }
+        // TODO: Handle if there are no definitions
+        DispatchQueue.main.async {
+          definitions = fetchedDefinitions
+          selectedDefinition = fetchedDefinitions.first ?? ""
         }
       } catch {
         print("Error decoding data: \(error)")
+        print("\(data)")
       }
     }.resume()
   }
@@ -85,18 +100,31 @@ struct DictionaryEntry: Codable {
     let word: String
     let phonetics: [Phonetic]
     let meanings: [Meaning]
+    let license: License?
+    let sourceUrls: [String]?
 }
 
 struct Phonetic: Codable {
-    let text: String
-    let audio: String
+    let text: String?
+    let audio: String?
+    let sourceUrl: String?
+    let license: License?
 }
 
 struct Meaning: Codable {
     let partOfSpeech: String
     let definitions: [Definition]
+    let synonyms: [String]?
+    let antonyms: [String]?
 }
 
 struct Definition: Codable {
     let definition: String
+    let synonyms: [String]?
+    let antonyms: [String]?
+}
+
+struct License: Codable {
+    let name: String
+    let url: String
 }
