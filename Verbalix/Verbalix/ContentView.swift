@@ -7,60 +7,102 @@
 
 import SwiftUI
 import SwiftData
+import AVFoundation
 
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var words: [Word]
   @State private var showPopup = false
-
+  
   var body: some View {
-      NavigationSplitView {
-          List {
-              ForEach(words) { word in
-                VStack(alignment: .leading) {
-                  Text(word.word)
-                    .font(.title2)
-                    
-                  
-                  Text(word.definitions.first!)
-                    .font(.subheadline)
-                }
-              }
-              .onDelete(perform: deleteItems)
+    NavigationSplitView {
+      List {
+        ForEach(words) { word in
+          HStack {
+            VStack(alignment: .leading) {
+              Text(word.word)
+                .font(.title2)
+              
+              
+              Text(word.definitions.first!)
+                .font(.subheadline)
+            }
+            
+            Spacer()
+            
+            PronounceButton(word: word.word)
           }
-          .toolbar {
-              ToolbarItem(placement: .navigationBarTrailing) {
-                  EditButton()
-              }
-              ToolbarItem {
-                Button(action: {
-                  showPopup = true
-                }) {
-                  Label("Add Item", systemImage: "plus")
-                }
-              }
-          }
-      } detail: {
-          Text("Select an item")
+        }
+        .onDelete(perform: deleteItems)
       }
-      .sheet(isPresented: $showPopup) {
-        AddWordPopup(showPopup: $showPopup, addWord: addItem)
-       }
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          EditButton()
+        }
+        ToolbarItem {
+          Button(action: {
+            showPopup = true
+          }) {
+            Label("Add Item", systemImage: "plus")
+          }
+        }
+      }
+    } detail: {
+      Text("Select an item")
+    }
+    .sheet(isPresented: $showPopup) {
+      AddWordPopup(showPopup: $showPopup, addWord: addItem)
+    }
   }
-
+  
   private func addItem(word: String, definitions: Set<String>) {
-      withAnimation {
-        let newItem = Word(word: word, definitions: definitions, dateAdded: Date())
-          modelContext.insert(newItem)
-      }
+    withAnimation {
+      let newItem = Word(word: word, definitions: definitions, dateAdded: Date())
+      modelContext.insert(newItem)
+    }
   }
-
+  
   private func deleteItems(offsets: IndexSet) {
-      withAnimation {
-          for index in offsets {
-              modelContext.delete(words[index])
-          }
+    withAnimation {
+      for index in offsets {
+        modelContext.delete(words[index])
       }
+    }
+  }
+}
+
+// TODO: Select the name only once (also, instructions on how to download)
+struct PronounceButton: View {
+  let word: String
+  private let synthesizer = AVSpeechSynthesizer()
+  let voices = AVSpeechSynthesisVoice.speechVoices()
+  var voiceToUse: AVSpeechSynthesisVoice?
+
+  init(word: String) {
+    self.word = word
+    voiceToUse = AVSpeechSynthesisVoice(language: "en-US")
+    for voice in voices {
+      if (voice.quality == .enhanced || voice.quality == .premium) && voice.language == "en-US" {
+        voiceToUse = voice
+      }
+    }
+  }
+  
+  var body: some View {
+    Button(action: {
+      speakWord(word)
+    }) {
+      Image(systemName: "speaker.wave.2.fill")
+        .foregroundColor(.blue)
+        .font(.system(size: 16))
+    }
+    .buttonStyle(PlainButtonStyle())
+  }
+  
+  private func speakWord(_ word: String) {
+    let utterance = AVSpeechUtterance(string: word)
+    utterance.voice = voiceToUse
+    synthesizer.speak(utterance)
   }
 }
 
