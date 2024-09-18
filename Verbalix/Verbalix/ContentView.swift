@@ -21,7 +21,7 @@ struct ContentView: View {
                   Text(word.word)
                     .font(.title)
                   
-                  Text(word.definition)
+                  Text(word.definitions.first!)
                     .font(.subheadline)
                 }
               }
@@ -47,9 +47,9 @@ struct ContentView: View {
        }
   }
 
-  private func addItem(word: String, definition: String) {
+  private func addItem(word: String, definitions: Set<String>) {
       withAnimation {
-        let newItem = Word(word: word, definition: definition, dateAdded: Date())
+        let newItem = Word(word: word, definitions: definitions, dateAdded: Date())
           modelContext.insert(newItem)
       }
   }
@@ -60,11 +60,6 @@ struct ContentView: View {
               modelContext.delete(words[index])
           }
       }
-  }
-  
-  private func generateRandomLetters(length: Int = 5) -> String {
-      let letters = "abcdefghijklmnopqrstuvwxyz"
-      return String((0..<length).map { _ in letters.randomElement()! })
   }
 }
 

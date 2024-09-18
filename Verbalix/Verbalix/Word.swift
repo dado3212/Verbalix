@@ -11,12 +11,12 @@ import SwiftData
 @Model
 final class Word {
   var word: String
-  var definition: String
+  var definitions: Set<String>
   var dateAdded: Date
     
-  init(word: String, definition: String, dateAdded: Date) {
+  init(word: String, definitions: Set<String>, dateAdded: Date) {
     self.word = word
-    self.definition = definition
+    self.definitions = definitions
     self.dateAdded = dateAdded
   }
 }
