@@ -17,9 +17,10 @@ struct ContentView: View {
       NavigationSplitView {
           List {
               ForEach(words) { word in
-                VStack {
+                VStack(alignment: .leading) {
                   Text(word.word)
-                    .font(.title)
+                    .font(.title2)
+                    
                   
                   Text(word.definitions.first!)
                     .font(.subheadline)
@@ -64,6 +65,12 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView()
-    .modelContainer(for: Word.self, inMemory: true)
+  
+  let config = ModelConfiguration(isStoredInMemoryOnly: true)
+  let container = try! ModelContainer(for: Word.self, configurations: config)
+  
+  container.mainContext.insert(Word(word: "feculent", definitions: ["Dirty with faeces or other impurities"], dateAdded: Date()))
+  
+  return ContentView()
+    .modelContainer(container)
 }
