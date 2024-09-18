@@ -77,7 +77,7 @@ struct PronounceButton: View {
   private let synthesizer = AVSpeechSynthesizer()
   let voices = AVSpeechSynthesisVoice.speechVoices()
   var voiceToUse: AVSpeechSynthesisVoice?
-
+  
   init(word: String) {
     self.word = word
     voiceToUse = AVSpeechSynthesisVoice(language: "en-US")
