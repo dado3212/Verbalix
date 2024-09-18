@@ -23,6 +23,7 @@
 		A444D16D2C75A73800BC610F /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D16C2C75A73800BC610F /* ActionRequestHandler.swift */; };
 		A444D16F2C75A73800BC610F /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = A444D16E2C75A73800BC610F /* Action.js */; };
 		A444D1732C75A73800BC610F /* VerbalixActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A444D1782C9A893500BC610F /* AddWordPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1772C9A893500BC610F /* AddWordPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		A444D16C2C75A73800BC610F /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		A444D16E2C75A73800BC610F /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
 		A444D1702C75A73800BC610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A444D1772C9A893500BC610F /* AddWordPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				A444D1222C75A36E00BC610F /* VerbalixApp.swift */,
 				A444D1242C75A36E00BC610F /* ContentView.swift */,
+				A444D1772C9A893500BC610F /* AddWordPopup.swift */,
 				A444D1262C75A36E00BC610F /* Word.swift */,
 				A444D1282C75A36F00BC610F /* Assets.xcassets */,
 				A444D12A2C75A36F00BC610F /* Preview Content */,
@@ -420,6 +423,7 @@
 			files = (
 				A444D1252C75A36E00BC610F /* ContentView.swift in Sources */,
 				A444D1272C75A36E00BC610F /* Word.swift in Sources */,
+				A444D1782C9A893500BC610F /* AddWordPopup.swift in Sources */,
 				A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
