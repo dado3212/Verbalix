@@ -10,17 +10,19 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var words: [Word]
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+                ForEach(words) { word in
+                  VStack {
+                    Text(word.word)
+                      .font(.title)
+                    
+                    Text(word.definition)
+                      .font(.subheadline)
+                  }
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -41,7 +43,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+          let newItem = Word(word: generateRandomLetters(), definition: generateRandomLetters(length: 20), dateAdded: Date())
             modelContext.insert(newItem)
         }
     }
@@ -49,13 +51,18 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(words[index])
             }
         }
     }
+  
+  private func generateRandomLetters(length: Int = 5) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyz"
+      return String((0..<length).map { _ in letters.randomElement()! })
+  }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Word.self, inMemory: true)
 }

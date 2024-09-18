@@ -11,13 +11,14 @@ import Social
 class ShareViewController: SLComposeServiceViewController {
 
     override func isContentValid() -> Bool {
-      print("validity")
+      print("hackingdartmouth - validity")
 //      print(self.contentText)
         // Do validation of contentText and/or NSExtensionContext attachments here
         return true
     }
 
     override func didSelectPost() {
+      print("hackingdartmouth - select post")
       print(extensionContext)
       if let item = extensionContext?.inputItems.first as? NSExtensionItem,
              let itemProvider = item.attachments?.first {
@@ -37,7 +38,7 @@ class ShareViewController: SLComposeServiceViewController {
     }
 
     override func configurationItems() -> [Any]! {
-      print("configuration items")
+      print("hackingdartmouth - configuration items")
         // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
         return []
     }

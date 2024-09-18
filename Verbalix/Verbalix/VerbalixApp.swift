@@ -10,9 +10,19 @@ import SwiftData
 
 @main
 struct VerbalixApp: App {
+  
+  init() {
+    // Media > Books > com.apple.ibooks-sync.plist
+    
+//          UserDefaults.standard.register(defaults: [
+//              "name": "Taylor Swift",
+//              "highScore": 10
+//          ])
+      }
+  
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Word.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1222C75A36E00BC610F /* VerbalixApp.swift */; };
 		A444D1252C75A36E00BC610F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1242C75A36E00BC610F /* ContentView.swift */; };
-		A444D1272C75A36E00BC610F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Item.swift */; };
+		A444D1272C75A36E00BC610F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
 		A444D1292C75A36F00BC610F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A444D1282C75A36F00BC610F /* Assets.xcassets */; };
 		A444D12C2C75A36F00BC610F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A444D12B2C75A36F00BC610F /* Preview Assets.xcassets */; };
 		A444D1362C75A36F00BC610F /* VerbalixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1352C75A36F00BC610F /* VerbalixTests.swift */; };
@@ -75,7 +75,7 @@
 		A444D11F2C75A36E00BC610F /* Verbalix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verbalix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444D1222C75A36E00BC610F /* VerbalixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixApp.swift; sourceTree = "<group>"; };
 		A444D1242C75A36E00BC610F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A444D1262C75A36E00BC610F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A444D1262C75A36E00BC610F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A444D1282C75A36F00BC610F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A444D12B2C75A36F00BC610F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A444D1312C75A36F00BC610F /* VerbalixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerbalixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 			children = (
 				A444D1222C75A36E00BC610F /* VerbalixApp.swift */,
 				A444D1242C75A36E00BC610F /* ContentView.swift */,
-				A444D1262C75A36E00BC610F /* Item.swift */,
+				A444D1262C75A36E00BC610F /* Word.swift */,
 				A444D1282C75A36F00BC610F /* Assets.xcassets */,
 				A444D12A2C75A36F00BC610F /* Preview Content */,
 			);
@@ -419,7 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A444D1252C75A36E00BC610F /* ContentView.swift in Sources */,
-				A444D1272C75A36E00BC610F /* Item.swift in Sources */,
+				A444D1272C75A36E00BC610F /* Word.swift in Sources */,
 				A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

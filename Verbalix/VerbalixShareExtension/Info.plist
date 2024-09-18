@@ -2,52 +2,62 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>IntentsSupported</key>
-			<array>
-				<string>INSendMessageIntent</string>
-			</array>
-			<key>NSExtensionActivationRule</key>
-			<string>SUBQUERY (
-          extensionItems,
-          $extensionItem,
-          (
-            SUBQUERY (
-              $extensionItem.attachments,
-              $attachment,
-              ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.image&quot; OR
-              ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.movie&quot;
-            ).@count &gt;= 1
-            AND
-            SUBQUERY (
-              $extensionItem.attachments,
-              $attachment,
-              ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.image&quot; OR
-              ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.movie&quot;
-            ).@count &lt;= 30
-          )
-          OR
-          SUBQUERY (
-            $extensionItem.attachments,
-            $attachment,
-            ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.url&quot; AND
-            NONE $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.file-url&quot;
-          ).@count == 1
-          OR
-          SUBQUERY (
-            $extensionItem.attachments,
-            $attachment,
-            ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.plain-text&quot;
-          ).@count &gt;= 1
-        ).@count &gt; 0</string>
-		</dict>
-		<key>NSExtensionMainStoryboard</key>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleDisplayName</key>
+  <string>Verbalix</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>Verbalix</string>
+  <key>CFBundlePackageType</key>
+  <string>XPC!</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>NSExtension</key>
+  <dict>
+    <key>NSExtensionAttributes</key>
+    <dict>
+      <key>IntentsSupported</key>
+      <array>
+        <string>INSendMessageIntent</string>
+      </array>
+      <key>NSExtensionActivationRule</key>
+      <dict>
+				<key>NSExtensionActivationSupportsFileWithMaxCount</key>
+        <integer>999</integer>
+        <key>NSExtensionActivationSupportsAttachmentsWithMaxCount</key>
+        <integer>999</integer>
+        <key>NSExtensionActivationSupportsImageWithMaxCount</key>
+        <integer>999</integer>
+        <key>NSExtensionActivationSupportsMovieWithMaxCount</key>
+        <integer>999</integer>
+        <key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
+        <integer>999</integer>
+        <key>NSExtensionActivationSupportsTextWithMinCount</key>
+        <integer>1</integer>
+        <key>NSExtensionActivationSupportsAttachmentsWithMinCount</key>
+        <integer>1</integer>
+        <key>NSExtensionActivationSupportsText</key>
+        <true />
+        <key>NSExtensionActivationSupportsWebPageWithMaxCount</key>
+        <integer>999</integer>
+			</dict>
+    </dict>
+    <key>NSExtensionOverridesHostUIAppearance</key>
+    <true/>
+    <key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.share-services</string>
-	</dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.share-services</string>
+  </dict>
+  <key>UIRequiredDeviceCapabilities</key>
+  <array>
+    <string>arm64</string>
+  </array>
 </dict>
 </plist>
