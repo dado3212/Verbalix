@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41A1DE52CC8B48D007ECEEA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41A1DE42CC8B48D007ECEEA /* WidgetKit.framework */; };
+		A41A1DE72CC8B48D007ECEEA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41A1DE62CC8B48D007ECEEA /* SwiftUI.framework */; };
+		A41A1DEA2CC8B48D007ECEEA /* VerbalixWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41A1DE92CC8B48D007ECEEA /* VerbalixWidgetBundle.swift */; };
+		A41A1DEC2CC8B48D007ECEEA /* VerbalixWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41A1DEB2CC8B48D007ECEEA /* VerbalixWidget.swift */; };
+		A41A1DEE2CC8B48E007ECEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41A1DED2CC8B48E007ECEEA /* Assets.xcassets */; };
+		A41A1DF22CC8B48E007ECEEA /* VerbalixWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A41A1DE32CC8B48D007ECEEA /* VerbalixWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A41A1DF82CC8B594007ECEEA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
 		A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1222C75A36E00BC610F /* VerbalixApp.swift */; };
 		A444D1252C75A36E00BC610F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1242C75A36E00BC610F /* ContentView.swift */; };
 		A444D1272C75A36E00BC610F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
@@ -27,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A41A1DF02CC8B48E007ECEEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A444D1172C75A36E00BC610F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A41A1DE22CC8B48D007ECEEA;
+			remoteInfo = VerbalixWidgetExtension;
+		};
 		A444D1322C75A36F00BC610F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A444D1172C75A36E00BC610F /* Project object */;
@@ -65,6 +79,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				A444D15C2C75A55700BC610F /* VerbalixShareExtension.appex in Embed Foundation Extensions */,
+				A41A1DF22CC8B48E007ECEEA /* VerbalixWidgetExtension.appex in Embed Foundation Extensions */,
 				A444D1732C75A73800BC610F /* VerbalixActionExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -73,6 +88,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A41A1DE32CC8B48D007ECEEA /* VerbalixWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VerbalixWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41A1DE42CC8B48D007ECEEA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A41A1DE62CC8B48D007ECEEA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A41A1DE92CC8B48D007ECEEA /* VerbalixWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixWidgetBundle.swift; sourceTree = "<group>"; };
+		A41A1DEB2CC8B48D007ECEEA /* VerbalixWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixWidget.swift; sourceTree = "<group>"; };
+		A41A1DED2CC8B48E007ECEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A41A1DEF2CC8B48E007ECEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41A1DF62CC8B4B5007ECEEA /* Verbalix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Verbalix.entitlements; sourceTree = "<group>"; };
+		A41A1DF72CC8B4C4007ECEEA /* VerbalixWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VerbalixWidgetExtension.entitlements; sourceTree = "<group>"; };
 		A444D11F2C75A36E00BC610F /* Verbalix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verbalix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444D1222C75A36E00BC610F /* VerbalixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixApp.swift; sourceTree = "<group>"; };
 		A444D1242C75A36E00BC610F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +122,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A41A1DE02CC8B48D007ECEEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41A1DE72CC8B48D007ECEEA /* SwiftUI.framework in Frameworks */,
+				A41A1DE52CC8B48D007ECEEA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A444D11C2C75A36E00BC610F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,14 +170,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A41A1DE82CC8B48D007ECEEA /* VerbalixWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A41A1DE92CC8B48D007ECEEA /* VerbalixWidgetBundle.swift */,
+				A41A1DEB2CC8B48D007ECEEA /* VerbalixWidget.swift */,
+				A41A1DED2CC8B48E007ECEEA /* Assets.xcassets */,
+				A41A1DEF2CC8B48E007ECEEA /* Info.plist */,
+			);
+			path = VerbalixWidget;
+			sourceTree = "<group>";
+		};
 		A444D1162C75A36E00BC610F = {
 			isa = PBXGroup;
 			children = (
+				A41A1DF72CC8B4C4007ECEEA /* VerbalixWidgetExtension.entitlements */,
 				A444D1212C75A36E00BC610F /* Verbalix */,
 				A444D1342C75A36F00BC610F /* VerbalixTests */,
 				A444D13E2C75A36F00BC610F /* VerbalixUITests */,
 				A444D1532C75A55700BC610F /* VerbalixShareExtension */,
 				A444D1692C75A73800BC610F /* VerbalixActionExtension */,
+				A41A1DE82CC8B48D007ECEEA /* VerbalixWidget */,
 				A444D1662C75A73800BC610F /* Frameworks */,
 				A444D1202C75A36E00BC610F /* Products */,
 			);
@@ -158,6 +204,7 @@
 				A444D13B2C75A36F00BC610F /* VerbalixUITests.xctest */,
 				A444D1522C75A55700BC610F /* VerbalixShareExtension.appex */,
 				A444D1652C75A73800BC610F /* VerbalixActionExtension.appex */,
+				A41A1DE32CC8B48D007ECEEA /* VerbalixWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +212,7 @@
 		A444D1212C75A36E00BC610F /* Verbalix */ = {
 			isa = PBXGroup;
 			children = (
+				A41A1DF62CC8B4B5007ECEEA /* Verbalix.entitlements */,
 				A444D1222C75A36E00BC610F /* VerbalixApp.swift */,
 				A444D1242C75A36E00BC610F /* ContentView.swift */,
 				A444D1772C9A893500BC610F /* AddWordPopup.swift */,
@@ -214,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				A444D1672C75A73800BC610F /* UniformTypeIdentifiers.framework */,
+				A41A1DE42CC8B48D007ECEEA /* WidgetKit.framework */,
+				A41A1DE62CC8B48D007ECEEA /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +282,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A41A1DE22CC8B48D007ECEEA /* VerbalixWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A41A1DF52CC8B48E007ECEEA /* Build configuration list for PBXNativeTarget "VerbalixWidgetExtension" */;
+			buildPhases = (
+				A41A1DDF2CC8B48D007ECEEA /* Sources */,
+				A41A1DE02CC8B48D007ECEEA /* Frameworks */,
+				A41A1DE12CC8B48D007ECEEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VerbalixWidgetExtension;
+			productName = VerbalixWidgetExtension;
+			productReference = A41A1DE32CC8B48D007ECEEA /* VerbalixWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A444D11E2C75A36E00BC610F /* Verbalix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A444D1452C75A36F00BC610F /* Build configuration list for PBXNativeTarget "Verbalix" */;
@@ -246,6 +313,7 @@
 			dependencies = (
 				A444D15B2C75A55700BC610F /* PBXTargetDependency */,
 				A444D1722C75A73800BC610F /* PBXTargetDependency */,
+				A41A1DF12CC8B48E007ECEEA /* PBXTargetDependency */,
 			);
 			name = Verbalix;
 			productName = Verbalix;
@@ -332,6 +400,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					A41A1DE22CC8B48D007ECEEA = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					A444D11E2C75A36E00BC610F = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -369,11 +440,20 @@
 				A444D13A2C75A36F00BC610F /* VerbalixUITests */,
 				A444D1512C75A55700BC610F /* VerbalixShareExtension */,
 				A444D1642C75A73800BC610F /* VerbalixActionExtension */,
+				A41A1DE22CC8B48D007ECEEA /* VerbalixWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A41A1DE12CC8B48D007ECEEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41A1DEE2CC8B48E007ECEEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A444D11D2C75A36E00BC610F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,6 +497,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A41A1DDF2CC8B48D007ECEEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41A1DEC2CC8B48D007ECEEA /* VerbalixWidget.swift in Sources */,
+				A41A1DEA2CC8B48D007ECEEA /* VerbalixWidgetBundle.swift in Sources */,
+				A41A1DF82CC8B594007ECEEA /* Word.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A444D11B2C75A36E00BC610F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +554,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A41A1DF12CC8B48E007ECEEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A41A1DE22CC8B48D007ECEEA /* VerbalixWidgetExtension */;
+			targetProxy = A41A1DF02CC8B48E007ECEEA /* PBXContainerItemProxy */;
+		};
 		A444D1332C75A36F00BC610F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A444D11E2C75A36E00BC610F /* Verbalix */;
@@ -498,6 +593,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A41A1DF32CC8B48E007ECEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VerbalixWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A41A1DF42CC8B48E007ECEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VerbalixWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2WR3HLA57;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerbalixWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerbalixWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbeals.Verbalix.VerbalixWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A444D1432C75A36F00BC610F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,6 +774,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Verbalix/Verbalix.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Verbalix/Preview Content\"";
@@ -653,6 +805,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Verbalix/Verbalix.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Verbalix/Preview Content\"";
@@ -856,6 +1009,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A41A1DF52CC8B48E007ECEEA /* Build configuration list for PBXNativeTarget "VerbalixWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41A1DF32CC8B48E007ECEEA /* Debug */,
+				A41A1DF42CC8B48E007ECEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A444D11A2C75A36E00BC610F /* Build configuration list for PBXProject "Verbalix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
