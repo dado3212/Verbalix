@@ -100,6 +100,13 @@ struct PronounceButton: View {
   }
   
   private func speakWord(_ word: String) {
+//    let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//            try audioSession.setActive(true)
+//        } catch {
+//            print("Failed to activate audio session: \(error)")
+//        }
+//    
     let utterance = AVSpeechUtterance(string: word)
     utterance.voice = voiceToUse
     synthesizer.speak(utterance)

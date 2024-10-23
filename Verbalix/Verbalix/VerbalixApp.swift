@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import AVFoundation
 
 @main
 struct VerbalixApp: App {
@@ -18,6 +19,13 @@ struct VerbalixApp: App {
 //              "name": "Taylor Swift",
 //              "highScore": 10
 //          ])
+    let audioSession = AVAudioSession.sharedInstance()
+    do {
+        try audioSession.setCategory(.playback, mode: .spokenAudio, options: .duckOthers)
+        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+    } catch {
+        print("Audio session setup failed: \(error)")
+    }
       }
   
     var sharedModelContainer: ModelContainer = {
