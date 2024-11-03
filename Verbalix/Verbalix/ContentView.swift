@@ -73,43 +73,22 @@ struct ContentView: View {
 
 // TODO: Select the name only once (also, instructions on how to download)
 struct PronounceButton: View {
+  @EnvironmentObject var speechManager: SpeechManager
   let word: String
-  private let synthesizer = AVSpeechSynthesizer()
-  let voices = AVSpeechSynthesisVoice.speechVoices()
-  var voiceToUse: AVSpeechSynthesisVoice?
   
   init(word: String) {
     self.word = word
-    voiceToUse = AVSpeechSynthesisVoice(language: "en-US")
-    for voice in voices {
-      if (voice.quality == .enhanced || voice.quality == .premium) && voice.language == "en-US" {
-        voiceToUse = voice
-      }
-    }
   }
   
   var body: some View {
     Button(action: {
-      speakWord(word)
+      speechManager.speak(text: word)
     }) {
       Image(systemName: "speaker.wave.2.fill")
         .foregroundColor(.blue)
         .font(.system(size: 16))
     }
     .buttonStyle(PlainButtonStyle())
-  }
-  
-  private func speakWord(_ word: String) {
-//    let audioSession = AVAudioSession.sharedInstance()
-//        do {
-//            try audioSession.setActive(true)
-//        } catch {
-//            print("Failed to activate audio session: \(error)")
-//        }
-//    
-    let utterance = AVSpeechUtterance(string: word)
-    utterance.voice = voiceToUse
-    synthesizer.speak(utterance)
   }
 }
 

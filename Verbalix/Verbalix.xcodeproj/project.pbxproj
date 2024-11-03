@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		A41A1DEE2CC8B48E007ECEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41A1DED2CC8B48E007ECEEA /* Assets.xcassets */; };
 		A41A1DF22CC8B48E007ECEEA /* VerbalixWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A41A1DE32CC8B48D007ECEEA /* VerbalixWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A41A1DF82CC8B594007ECEEA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
+		A41A1DFA2CC8BBF7007ECEEA /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */; };
 		A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1222C75A36E00BC610F /* VerbalixApp.swift */; };
 		A444D1252C75A36E00BC610F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1242C75A36E00BC610F /* ContentView.swift */; };
 		A444D1272C75A36E00BC610F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
@@ -97,6 +98,7 @@
 		A41A1DEF2CC8B48E007ECEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41A1DF62CC8B4B5007ECEEA /* Verbalix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Verbalix.entitlements; sourceTree = "<group>"; };
 		A41A1DF72CC8B4C4007ECEEA /* VerbalixWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VerbalixWidgetExtension.entitlements; sourceTree = "<group>"; };
+		A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		A444D11F2C75A36E00BC610F /* Verbalix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verbalix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444D1222C75A36E00BC610F /* VerbalixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixApp.swift; sourceTree = "<group>"; };
 		A444D1242C75A36E00BC610F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,20 @@
 		A444D1702C75A73800BC610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A444D1772C9A893500BC610F /* AddWordPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A479E83B2CD8164E0079FE15 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ShuffleWidgetIntent.swift,
+			);
+			target = A41A1DE22CC8B48D007ECEEA /* VerbalixWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A479E8372CD815DE0079FE15 /* Intents */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (A479E83B2CD8164E0079FE15 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Intents; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A41A1DE02CC8B48D007ECEEA /* Frameworks */ = {
@@ -212,9 +228,11 @@
 		A444D1212C75A36E00BC610F /* Verbalix */ = {
 			isa = PBXGroup;
 			children = (
+				A479E8372CD815DE0079FE15 /* Intents */,
 				A41A1DF62CC8B4B5007ECEEA /* Verbalix.entitlements */,
 				A444D1222C75A36E00BC610F /* VerbalixApp.swift */,
 				A444D1242C75A36E00BC610F /* ContentView.swift */,
+				A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */,
 				A444D1772C9A893500BC610F /* AddWordPopup.swift */,
 				A444D1262C75A36E00BC610F /* Word.swift */,
 				A444D1282C75A36F00BC610F /* Assets.xcassets */,
@@ -314,6 +332,9 @@
 				A444D15B2C75A55700BC610F /* PBXTargetDependency */,
 				A444D1722C75A73800BC610F /* PBXTargetDependency */,
 				A41A1DF12CC8B48E007ECEEA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A479E8372CD815DE0079FE15 /* Intents */,
 			);
 			name = Verbalix;
 			productName = Verbalix;
@@ -512,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A444D1252C75A36E00BC610F /* ContentView.swift in Sources */,
+				A41A1DFA2CC8BBF7007ECEEA /* SpeechManager.swift in Sources */,
 				A444D1272C75A36E00BC610F /* Word.swift in Sources */,
 				A444D1782C9A893500BC610F /* AddWordPopup.swift in Sources */,
 				A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */,

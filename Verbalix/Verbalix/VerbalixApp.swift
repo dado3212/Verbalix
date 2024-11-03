@@ -19,13 +19,6 @@ struct VerbalixApp: App {
 //              "name": "Taylor Swift",
 //              "highScore": 10
 //          ])
-    let audioSession = AVAudioSession.sharedInstance()
-    do {
-        try audioSession.setCategory(.playback, mode: .spokenAudio, options: .duckOthers)
-        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-    } catch {
-        print("Audio session setup failed: \(error)")
-    }
       }
   
     var sharedModelContainer: ModelContainer = {
@@ -40,10 +33,13 @@ struct VerbalixApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+  
+  @StateObject var speechManager = SpeechManager()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(speechManager)
         }
         .modelContainer(sharedModelContainer)
     }
