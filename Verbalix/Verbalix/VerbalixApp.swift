@@ -12,35 +12,28 @@ import AVFoundation
 @main
 struct VerbalixApp: App {
   
-  init() {
-    // Media > Books > com.apple.ibooks-sync.plist
-    
-//          UserDefaults.standard.register(defaults: [
-//              "name": "Taylor Swift",
-//              "highScore": 10
-//          ])
-      }
+  init() {}
   
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Word.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+  var sharedModelContainer: ModelContainer = {
+    let schema = Schema([
+      Word.self,
+    ])
+    let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    do {
+      return try ModelContainer(for: schema, configurations: [modelConfiguration])
+    } catch {
+      fatalError("Could not create ModelContainer: \(error)")
+    }
+  }()
   
   @StateObject var speechManager = SpeechManager()
   
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-            .environmentObject(speechManager)
-        }
-        .modelContainer(sharedModelContainer)
+  var body: some Scene {
+    WindowGroup {
+      MainView()
+        .environmentObject(speechManager)
     }
+    .modelContainer(sharedModelContainer)
+  }
 }

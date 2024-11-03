@@ -16,7 +16,6 @@
 		A41A1DF82CC8B594007ECEEA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
 		A41A1DFA2CC8BBF7007ECEEA /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */; };
 		A444D1232C75A36E00BC610F /* VerbalixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1222C75A36E00BC610F /* VerbalixApp.swift */; };
-		A444D1252C75A36E00BC610F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1242C75A36E00BC610F /* ContentView.swift */; };
 		A444D1272C75A36E00BC610F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D1262C75A36E00BC610F /* Word.swift */; };
 		A444D1292C75A36F00BC610F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A444D1282C75A36F00BC610F /* Assets.xcassets */; };
 		A444D12C2C75A36F00BC610F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A444D12B2C75A36F00BC610F /* Preview Assets.xcassets */; };
@@ -101,7 +100,6 @@
 		A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		A444D11F2C75A36E00BC610F /* Verbalix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verbalix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444D1222C75A36E00BC610F /* VerbalixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalixApp.swift; sourceTree = "<group>"; };
-		A444D1242C75A36E00BC610F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A444D1262C75A36E00BC610F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A444D1282C75A36F00BC610F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A444D12B2C75A36F00BC610F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A479E8372CD815DE0079FE15 /* Intents */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (A479E83B2CD8164E0079FE15 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Intents; sourceTree = "<group>"; };
+		A479E83C2CD8215A0079FE15 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,10 +227,10 @@
 		A444D1212C75A36E00BC610F /* Verbalix */ = {
 			isa = PBXGroup;
 			children = (
+				A479E83C2CD8215A0079FE15 /* Views */,
 				A479E8372CD815DE0079FE15 /* Intents */,
 				A41A1DF62CC8B4B5007ECEEA /* Verbalix.entitlements */,
 				A444D1222C75A36E00BC610F /* VerbalixApp.swift */,
-				A444D1242C75A36E00BC610F /* ContentView.swift */,
 				A41A1DF92CC8BBF7007ECEEA /* SpeechManager.swift */,
 				A444D1772C9A893500BC610F /* AddWordPopup.swift */,
 				A444D1262C75A36E00BC610F /* Word.swift */,
@@ -335,6 +334,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				A479E8372CD815DE0079FE15 /* Intents */,
+				A479E83C2CD8215A0079FE15 /* Views */,
 			);
 			name = Verbalix;
 			productName = Verbalix;
@@ -532,7 +532,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A444D1252C75A36E00BC610F /* ContentView.swift in Sources */,
 				A41A1DFA2CC8BBF7007ECEEA /* SpeechManager.swift in Sources */,
 				A444D1272C75A36E00BC610F /* Word.swift in Sources */,
 				A444D1782C9A893500BC610F /* AddWordPopup.swift in Sources */,

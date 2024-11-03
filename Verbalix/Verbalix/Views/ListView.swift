@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import AVFoundation
 
-struct ContentView: View {
+struct ListView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var words: [Word]
   @State private var showPopup = false
@@ -99,6 +99,6 @@ struct PronounceButton: View {
   
   container.mainContext.insert(Word(word: "feculent", definitions: ["Dirty with faeces or other impurities"], dateAdded: Date()))
   
-  return ContentView()
+  return ListView()
     .modelContainer(container)
 }
