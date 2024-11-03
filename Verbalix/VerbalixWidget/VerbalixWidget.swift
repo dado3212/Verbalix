@@ -23,26 +23,26 @@ var sharedModelContainer: ModelContainer = {
 }()
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-      SimpleEntry(date: Date(), words: [Word(word: "feculent", definitions: ["Dirty with faeces or other impurities"], dateAdded: Date())])
-    }
+  func placeholder(in context: Context) -> SimpleEntry {
+    SimpleEntry(date: Date(), word: Word(word: "feculent", definitions: ["Dirty with faeces or other impurities"], dateAdded: Date()))
+  }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-      let entry = fetchRandomWords()
-      completion(entry)
-    }
+  func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    let entry = fetchRandomWord()
+    completion(entry)
+  }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-      let currentDate = Date()
-              let nextUpdate = Calendar.current.date(byAdding: .minute, value: 20, to: currentDate)!
+  func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    let currentDate = Date()
+    let nextUpdate = Calendar.current.date(byAdding: .minute, value: 20, to: currentDate)!
 
-              let entry = fetchRandomWords()
-              let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
+    let entry = fetchRandomWord()
+    let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
 
-              completion(timeline)
-    }
+    completion(timeline)
+  }
   
-  private func fetchRandomWords() -> SimpleEntry {
+  private func fetchRandomWord() -> SimpleEntry {
     let context = ModelContext(sharedModelContainer)
 
     // Fetch all words
@@ -56,25 +56,23 @@ struct Provider: TimelineProvider {
     words.shuffle()
 
     // Choose a random word
-    return SimpleEntry(date: Date(), words: Array(words.prefix(10)))
+    return SimpleEntry(date: Date(), word: words.randomElement()!)
   }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let words: [Word]
+    let word: Word
 }
 
 struct VerbalixWidgetEntryView : View {
-  @State private var offset: Int = 0
-      
   var entry: Provider.Entry
 
   var body: some View {
     GeometryReader { geometry in
       VStack(alignment: .leading) {
         HStack {
-          Text(entry.words[offset].word)
+          Text(entry.word.word)
             .font(.title2)
           
           Button(intent: ShuffleWidgetIntent()) {
@@ -83,7 +81,7 @@ struct VerbalixWidgetEntryView : View {
             .frame(maxWidth: .infinity, alignment: .trailing)
         }
         VStack(alignment: .leading) {
-          ForEach(Array(entry.words[offset].definitions), id: \.self) { definition in
+          ForEach(Array(entry.word.definitions), id: \.self) { definition in
             Text(definition)
               .font(.subheadline)
               .fixedSize(horizontal: false, vertical: true)
@@ -123,5 +121,5 @@ struct VerbalixWidget: Widget {
 #Preview(as: .systemSmall) {
     VerbalixWidget()
 } timeline: {
-  SimpleEntry(date: .now, words: [Word(word: "slew", definitions: ["A change of position"], dateAdded: Date()), Word(word: "temp", definitions: ["Temperature"], dateAdded: Date())])
+  SimpleEntry(date: .now, word: Word(word: "slew", definitions: ["A change of position"], dateAdded: Date()))
 }

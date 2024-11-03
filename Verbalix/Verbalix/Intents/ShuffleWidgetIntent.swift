@@ -8,9 +8,10 @@
 import AppIntents
 
 struct ShuffleWidgetIntent: AppIntent {
-    static var title: LocalizedStringResource = "Shuffle Widget"
+  static var title: LocalizedStringResource = "Shuffle Widget"
 
-    func perform() async throws -> some IntentResult {
-        return .result()
-    }
+  func perform() async throws -> some IntentResult {
+    // Does nothing at all, but refreshes the timeline, which shuffles again
+    return .result()
+  }
 }
