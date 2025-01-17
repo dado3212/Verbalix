@@ -11,7 +11,7 @@ import AVFoundation
 
 struct ListView: View {
   @Environment(\.modelContext) private var modelContext
-  @Query private var words: [Word]
+  @Query(sort: \Word.dateAdded, order: .reverse) private var words: [Word]
   @State private var showPopup = false
   
   var body: some View {
